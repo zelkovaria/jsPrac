@@ -4,24 +4,26 @@
 
 //페이지 자릿수 더하기와 곱하기 기능
 
-// function problem1(pobi, crong) {
-const sum = (num) => {
-  //   const stringNum = num.toString();
-  let result = 0;
-  for (let i = 0; i < num.length; i++) {
-    const digit = parseInt(num[i]);
-    result += digit;
-  }
-  return result;
-};
+function problem1(pobi, crong) {
+  if (pobi[0] + 1 !== pobi[1] || crong[0] + 1 !== pobi[1]) return -1;
+  if (pobi[0] <= 0 || crong[0] >= 401) return -1;
 
-const multiply = (num) => {
-  let result = 1;
-  for (let i = 0; i < num.length; i++) {
-    const digit = parseInt(num[i]);
-    result *= digit;
-  }
-  return result;
-};
-console.log(sum("125"));
-// }
+  const sum = (num) => {
+    let result = 0;
+    for (let i = 0; i < num.length; i++) {
+      const digit = parseInt(num[i]);
+      result += digit;
+    }
+    return result;
+  };
+
+  const multiply = (num) => {
+    let result = 1;
+    for (let i = 0; i < num.length; i++) {
+      const digit = parseInt(num[i]);
+      result *= digit;
+    }
+    return result;
+  };
+  console.log(sum("125"));
+}
