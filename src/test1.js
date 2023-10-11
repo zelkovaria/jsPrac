@@ -8,8 +8,12 @@ function problem1(pobi, crong) {
   if (pobi[0] + 1 !== pobi[1] || crong[0] + 1 !== pobi[1]) return -1;
   if (pobi[0] <= 0 || crong[0] >= 401) return -1;
 
-  let pobiScore = maxScore(num(pobi), multiply(pobi));
-  let crongScore = maxScore(num(crong), multiply(crong));
+  let pobiScore = maxScore(sum(pobi), multiply(pobi));
+  let crongScore = maxScore(sum(crong), multiply(crong));
+
+  if (pobiScore > crongScore) return 1;
+  if (pobiScore < crongScore) return 2;
+  if (pobiScore === crongScore) return 0;
 
   const sum = (num) => {
     let result = 0;
@@ -34,3 +38,4 @@ function problem1(pobi, crong) {
     return biggerNum;
   }
 }
+module.exports = problem1;
