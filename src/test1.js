@@ -7,12 +7,19 @@
 function problem1(pobi, crong) {
   const sum = (num) => {
     const stringNum = num.toString();
-
     let result = 0;
     for (let i = 0; i < stringNum.length; i++) {
       result += parseInt(stringNum[i]);
     }
     return result;
   };
-  console.log(sum(125));
+
+  const multiply = (num) => {
+    let result = 1;
+    for (let i = 0; i < num.length; i++) {
+      const digit = parseInt(num[i]);
+      result *= digit;
+    }
+    return result;
+  };
 }
