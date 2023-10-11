@@ -8,6 +8,9 @@ function problem1(pobi, crong) {
   if (pobi[0] + 1 !== pobi[1] || crong[0] + 1 !== pobi[1]) return -1;
   if (pobi[0] <= 0 || crong[0] >= 401) return -1;
 
+  let pobiScore = maxScore(num(pobi), multiply(pobi));
+  let crongScore = maxScore(num(crong), multiply(crong));
+
   const sum = (num) => {
     let result = 0;
     for (let i = 0; i < num.length; i++) {
@@ -25,5 +28,9 @@ function problem1(pobi, crong) {
     }
     return result;
   };
-  console.log(sum("125"));
+
+  function maxScore(num1, num2) {
+    let biggerNum = Math.max(num1, num2);
+    return biggerNum;
+  }
 }
