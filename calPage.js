@@ -4,7 +4,7 @@
 
 //페이지 자릿수 더하기와 곱하기 기능
 
-function problem1(pobi, crong) {
+function compare(pobi, crong) {
   if (pobi[0] + 1 !== pobi[1] || crong[0] + 1 !== pobi[1]) return -1;
   if (pobi[0] <= 0 || crong[0] >= 401) return -1;
 
@@ -38,4 +38,4 @@ function maxScore(num1, num2) {
   return biggerNum;
 }
 
-exports.problem1 = problem1;
+exports.compare = compare;
