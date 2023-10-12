@@ -14,28 +14,28 @@ function problem1(pobi, crong) {
   if (pobiScore > crongScore) return 1;
   if (pobiScore < crongScore) return 2;
   if (pobiScore === crongScore) return 0;
-
-  const sum = (num) => {
-    let result = 0;
-    for (let i = 0; i < num.length; i++) {
-      const digit = parseInt(num[i]);
-      result += digit;
-    }
-    return result;
-  };
-
-  const multiply = (num) => {
-    let result = 1;
-    for (let i = 0; i < num.length; i++) {
-      const digit = parseInt(num[i]);
-      result *= digit;
-    }
-    return result;
-  };
-
-  function maxScore(num1, num2) {
-    let biggerNum = Math.max(num1, num2);
-    return biggerNum;
-  }
 }
-module.exports = problem1;
+const sum = (num) => {
+  let result = 0;
+  for (let i = 0; i < num.length; i++) {
+    const digit = parseInt(num[i]);
+    result += digit;
+  }
+  return result;
+};
+
+const multiply = (num) => {
+  let result = 1;
+  for (let i = 0; i < num.length; i++) {
+    const digit = parseInt(num[i]);
+    result *= digit;
+  }
+  return result;
+};
+
+function maxScore(num1, num2) {
+  let biggerNum = Math.max(num1, num2);
+  return biggerNum;
+}
+
+// export const problem1 = () => {};
