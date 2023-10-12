@@ -38,4 +38,4 @@ function maxScore(num1, num2) {
   return biggerNum;
 }
 
-// export const problem1 = () => {};
+exports.problem1 = problem1;
