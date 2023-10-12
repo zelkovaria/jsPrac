@@ -1,5 +1,3 @@
-// import problem1 from "./test1.js";
-// import ~ from './test1.js';
 const compareScore = require("./calPage");
 
 const pobi = [97, 98];

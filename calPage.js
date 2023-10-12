@@ -5,30 +5,43 @@
 //페이지 자릿수 더하기와 곱하기 기능
 
 function compare(pobi, crong) {
-  if (pobi[0] + 1 !== pobi[1] || crong[0] + 1 !== pobi[1]) return -1;
-  if (pobi[0] <= 0 || crong[0] >= 401) return -1;
+  const isValidPage = (page) => page >= 1 && page <= 400;
+
+  if (
+    !isValidPage(pobi[0]) ||
+    !isValidPage(pobi[1]) ||
+    !isValidPage(crong[0]) ||
+    !isValidPage(crong[1]) ||
+    pobi[1] - pobi[0] !== 1 ||
+    crong[1] - crong[0] !== 1
+  ) {
+    return -1;
+  }
 
   let pobiScore = maxScore(sum(pobi), multiply(pobi));
   let crongScore = maxScore(sum(crong), multiply(crong));
 
   if (pobiScore > crongScore) return 1;
   if (pobiScore < crongScore) return 2;
-  if (pobiScore === crongScore) return 0;
+  return 0;
 }
+
 const sum = (num) => {
   let result = 0;
-  for (let i = 0; i < num.length; i++) {
-    const digit = parseInt(num[i]);
+  while (num > 0) {
+    const digit = num % 10;
     result += digit;
+    num = Math.floor(num / 10);
   }
   return result;
 };
 
 const multiply = (num) => {
   let result = 1;
-  for (let i = 0; i < num.length; i++) {
-    const digit = parseInt(num[i]);
+  while (num > 0) {
+    const digit = num % 10;
     result *= digit;
+    num = Math.floor(num / 10);
   }
   return result;
 };
