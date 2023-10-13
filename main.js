@@ -1,4 +1,4 @@
-const compareScore = require("./calPage");
+const compareScore = require("./page-cal/calPage");
 
 const pobi = [97, 98];
 const crong = [197, 198];
