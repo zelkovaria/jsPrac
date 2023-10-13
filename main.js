@@ -7,3 +7,5 @@ const result = compareScore.compare(pobi, crong);
 
 console.log(result);
 console.log(typeof pobi[0]);
+
+/* #################### */
