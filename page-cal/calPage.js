@@ -26,7 +26,7 @@ function compare(pobi, crong) {
   return 0;
 }
 
-const sum = (num) => {
+function sum(num) {
   let result = 0;
   while (num > 0) {
     const digit = num % 10;
@@ -34,9 +34,9 @@ const sum = (num) => {
     num = Math.floor(num / 10);
   }
   return result;
-};
+}
 
-const multiply = (num) => {
+function multiply(num) {
   let result = 1;
   while (num > 0) {
     const digit = num % 10;
@@ -44,7 +44,7 @@ const multiply = (num) => {
     num = Math.floor(num / 10);
   }
   return result;
-};
+}
 
 function maxScore(num1, num2) {
   let biggerNum = Math.max(num1, num2);
