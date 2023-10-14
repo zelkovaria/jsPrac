@@ -6,7 +6,10 @@
 
 function numBall(user) {
   const strikeResult = strikeBall(user, computerNum());
-  console.log(strikeResult + "볼");
+  const ballNum = strikeResult[0];
+  const strikeNum = strikeResult[1];
+  console.log(ballNum + "볼");
+  console.log(strikeNum + "스트라이크");
 }
 
 function computerNum() {
@@ -27,12 +30,14 @@ function strikeBall(num, computerNum) {
   for (let i = 0; i < num.length; i++) {
     if (computerBall[i] === num[i]) {
       ballNum += 1;
-
-      continue;
+      //   continue;
+    }
+    if (computerBall.includes(num[i])) {
+      strikeNum += 1;
     }
   }
-  console.log(computerBall + "여기");
-  return ballNum;
+
+  return [ballNum, strikeNum];
 }
 
 exports.numBall = numBall;
