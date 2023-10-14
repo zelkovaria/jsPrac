@@ -9,10 +9,10 @@
 
 /* #################### */
 
-const delAlpha = require("./cryptogram-del/delCryptogram");
+// const delAlpha = require("./cryptogram-del/delCryptogram");
 
-const cryptogram = "zyelleyz";
-const result2 = delAlpha.delAlpha(cryptogram);
-console.log(result2.join(""));
+// const cryptogram = "zyelleyz";
+// const result2 = delAlpha.delAlpha(cryptogram);
+// console.log(result2.join(""));
 
 /* #################### */
