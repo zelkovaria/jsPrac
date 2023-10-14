@@ -3,9 +3,14 @@
 // 같은 숫자인지 비교
 // 같은 자리에 위치했는지 비교
 // 3스트라이크 출력 문구
+
+function numBall(user) {
+  const strikeResult = strikeBall(user, computerNum());
+  console.log(strikeResult + "볼");
+}
+
 function computerNum() {
   let numList = [];
-  // const computer = [];
   for (let i = 0; i < 3; i++) {
     const computerNum = Math.floor(Math.random() * 9 + 1);
     numList.push(computerNum);
@@ -14,19 +19,20 @@ function computerNum() {
   return computer;
 }
 
-function strike(num) {
-  let numList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function strikeBall(num, computerNum) {
+  const computerBall = computerNum;
   let strikeNum = 0;
+  let ballNum = 0;
 
-  for (let i = 0; i < numList.length; i++) {
-    if (num[i] === numList) {
-      strikeNum++;
+  for (let i = 0; i < num.length; i++) {
+    if (computerBall[i] === num[i]) {
+      ballNum += 1;
 
       continue;
     }
   }
-  return strikeNum;
+  console.log(computerBall + "여기");
+  return ballNum;
 }
 
-// console.log(strike());
-console.log(computerNum());
+exports.numBall = numBall;

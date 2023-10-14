@@ -16,3 +16,8 @@
 // console.log(result2.join(""));
 
 /* #################### */
+const baseball = require("./baseball/chooseNum");
+
+const user = "123";
+const result = baseball.numBall(user);
+console.log(result);
