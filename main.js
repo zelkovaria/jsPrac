@@ -9,10 +9,15 @@
 
 /* #################### */
 
-const delAlpha = require("./cryptogram-del/delCryptogram");
+// const delAlpha = require("./cryptogram-del/delCryptogram");
 
-const cryptogram = "zyelleyz";
-const result2 = delAlpha.delAlpha(cryptogram);
-console.log(result2.join(""));
+// const cryptogram = "zyelleyz";
+// const result2 = delAlpha.delAlpha(cryptogram);
+// console.log(result2.join(""));
 
 /* #################### */
+const baseball = require("./baseball/chooseNum");
+
+const user = "123";
+const result = baseball.numBall(user);
+console.log(result);
